@@ -33,6 +33,6 @@ async def book_chosen(message: types.Message, state: FSMContext):
     await state.finish()
 
 
-def register_handlers_book(dp: Dispatcher):
+async def register_handlers_book(dp: Dispatcher):
     dp.register_message_handler(book_start, content_types=types.ContentTypes.DOCUMENT, state="*")
     dp.register_message_handler(book_chosen, state=TransferBook.waiting_for_book_type)
