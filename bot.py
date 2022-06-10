@@ -45,8 +45,7 @@ if __name__ == '__main__':
     logger.error("Starting bot")
 
     # Регистрация хэндлеров
-    await register_handlers_common(dp, config.tg_bot.admin_id)
-    await register_handlers_book(dp)
+
 
 
     # Запуск поллинга
