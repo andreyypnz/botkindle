@@ -279,18 +279,19 @@
 		#----  "app"  - apnx will be located alongside with converted file
 		generate_apnx = "none"
 
+
 [sendtokindle]
 	#---- In case book sent successfully - delete it from disk
 	delete_sent_book = true
 
 	#---- SMTP server parameters
-	smtp_server = "smtp.gmail.com"
-	smtp_port = 587
-	smtp_user = "andreyybunch"
-	smtp_password = "and963963"
+	smtp_server = "smtp.yandex.ru"
+	smtp_port = 465
+	smtp_user = "andreyypnz"
+	smtp_password = "lbmzsycapvhmwyib"
 
 	#---- Required by Amazon service
-	from_mail = "andreyybunch@gmail.com"
+	from_mail = "andreyypnz@yandex.ru"
 	to_mail = "andreyypnz_jaYMkX@kindle.com"
 #-----------------------------------------------------------------------------------------------------------------------------
 #---- Sometimes external processors will need to overwrite some or all of book meta-data and or cover image. You could specify
