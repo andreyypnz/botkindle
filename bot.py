@@ -12,6 +12,12 @@ from app.handlers.common import register_handlers_common
 logger = logging.getLogger(__name__)
 
 TOKEN = os.getenv('BOT_TOKEN')
+config = load_config("config/bot.ini")
+
+# Объявление и инициализация объектов бота и диспетчера
+bot = Bot(token=TOKEN)
+dp = Dispatcher(bot, storage=MemoryStorage())
+
 HEROKU_APP_NAME = os.getenv('HEROKU_APP_NAME')
 
 # webhook settings
@@ -37,13 +43,6 @@ if __name__ == '__main__':
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
     )
     logger.error("Starting bot")
-
-    # Парсинг файла конфигурации
-    config = load_config("config/bot.ini")
-
-    # Объявление и инициализация объектов бота и диспетчера
-    bot = Bot(token=TOKEN)
-    dp = Dispatcher(bot, storage=MemoryStorage())
 
     # Регистрация хэндлеров
     register_handlers_common(dp, config.tg_bot.admin_id)
