@@ -53,7 +53,7 @@ async def main():
     # Запуск поллинга
     # await dp.skip_updates()  # пропуск накопившихся апдейтов (необязательно)
     # await dp.start_polling()
-    start_webhook(
+    await start_webhook(
         dispatcher=dp,
         webhook_path=WEBHOOK_PATH,
         skip_updates=True,
