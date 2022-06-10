@@ -11,6 +11,7 @@ from app.handlers.common import register_handlers_common
 
 logger = logging.getLogger(__name__)
 
+TOKEN = os.getenv('BOT_TOKEN')
 HEROKU_APP_NAME = os.getenv('HEROKU_APP_NAME')
 
 # webhook settings
@@ -41,7 +42,7 @@ async def main():
     config = load_config("config/bot.ini")
 
     # Объявление и инициализация объектов бота и диспетчера
-    bot = Bot(token=config.tg_bot.token)
+    bot = Bot(token=TOKEN)
     dp = Dispatcher(bot, storage=MemoryStorage())
 
     # Регистрация хэндлеров
