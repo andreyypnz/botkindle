@@ -8,3 +8,4 @@ fi
 echo $conf
 fb2c/fb2c -c $conf convert --to epub --stk documents documents_out
 rm -rf documents/*
+rm -rf documents_out/*
