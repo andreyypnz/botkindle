@@ -339,13 +339,8 @@
 	#---- via command line to fb2mobi.exe. So in one and only case when fb2c is started indirectly using fb2mobi helper
 	#---- "convert" command line option "--to" will be ignored and value of "output_format" will be used instead
 	#---- If it is not specified here - "mobi" is assumed.
-	output_format = "mobi"
+	# output_format = "mobi"
 
-	#---- NOTE: due to specifics of current MyHomeLib implementation there is no way to activate SendToKindle
-	#---- via command line to fb2mobi.exe. So in one and only case when fb2c is started indirectly using fb2mobi helper
-	#---- "convert" command line option "--stk" will be ignored and value of "send_to_kindle" will be used instead
-	#---- If it is not specified here - "false" is assumed.
-	send_to_kindle = true
 	
 [fb2epub]
 
@@ -353,4 +348,10 @@
 	#---- via command line to fb2epub.exe. So in one and only case when fb2c is started indirectly using fb2epub helper
 	#---- "convert" command line option "--to" will be ignored and value of "output_format" will be used instead
 	#---- If it is not specified here - "epub" is assumed.
-	# output_format = "epub"
+	output_format = "epub"
+	
+	#---- NOTE: due to specifics of current MyHomeLib implementation there is no way to activate SendToKindle
+	#---- via command line to fb2epub.exe. So in one and only case when fb2c is started indirectly using fb2epub helper
+	#---- "convert" command line option "--stk" will be ignored and value of "send_to_kindle" will be used instead
+	#---- If it is not specified here - "false" is assumed.
+	send_to_kindle = true

@@ -6,5 +6,5 @@ elif [ "$1" = "да" ]; then
   conf="fb2c/conf_kindle_email.toml"
 fi
 echo $conf
-fb2c/fb2c -c $conf convert --to mobi --stk documents documents_out
+fb2c/fb2c -c $conf convert --to epub --stk documents documents_out
 rm -rf documents/*
