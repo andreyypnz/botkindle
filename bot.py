@@ -46,7 +46,8 @@ if __name__ == '__main__':
 
     # Регистрация хэндлеров
 
-
+    register_handlers_common(dp, config.tg_bot.admin_id)
+    register_handlers_book(dp)
 
     # Запуск поллинга
     # await dp.skip_updates()  # пропуск накопившихся апдейтов (необязательно)

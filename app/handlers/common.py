@@ -22,7 +22,7 @@ async def secret_command(message: types.Message):
     await message.answer("Поздравляю! Эта команда доступна только администратору бота.")
 
 
-async def register_handlers_common(dp: Dispatcher, admin_id: int):
+def register_handlers_common(dp: Dispatcher, admin_id: int):
     dp.register_message_handler(cmd_start, commands="start", state="*")
     dp.register_message_handler(cmd_cancel, commands="cancel", state="*")
     dp.register_message_handler(cmd_cancel, Text(equals="отмена", ignore_case=True), state="*")
