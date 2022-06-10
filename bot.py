@@ -30,8 +30,8 @@ async def on_startup(dispatcher):
 async def on_shutdown(dispatcher):
     await bot.delete_webhook()
 
-async def main():
-    # Настройка логирования в stdout
+
+if __name__ == '__main__':
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
@@ -53,7 +53,7 @@ async def main():
     # Запуск поллинга
     # await dp.skip_updates()  # пропуск накопившихся апдейтов (необязательно)
     # await dp.start_polling()
-    await start_webhook(
+    start_webhook(
         dispatcher=dp,
         webhook_path=WEBHOOK_PATH,
         skip_updates=True,
@@ -62,7 +62,3 @@ async def main():
         host=WEBAPP_HOST,
         port=WEBAPP_PORT,
     )
-
-
-if __name__ == '__main__':
-    asyncio.run(main())
